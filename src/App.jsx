@@ -1,10 +1,17 @@
-import React from 'react'
+import Home from "./components/Home";
+import { BrowserRouter,Routes,Route } from "react-router-dom";
+import Notfound from "./components/Notfound";
 
 const App = () => {
   return (
-    <div>
-      <h1 className='text-3xl text-white'>welcome to the Potfolio website!</h1>
-    </div>
+    <>
+      <BrowserRouter>
+       <Routes>
+        <Route path="/" element={<Home/>}/>
+        <Route path="*" element={<Notfound/>}/>
+       </Routes>
+      </BrowserRouter>
+    </>
   )
 }
 
