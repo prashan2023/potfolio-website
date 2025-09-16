@@ -23,11 +23,12 @@ const ToggleTheme = () => {
     setToggleTheme(!toggleTheme);
   }
   return (
-    <div className="min-h-screen bg-background text-foreground overflow-x-hidden">
+    <div>
       <div className="flex justify-end pr-10 pt-4" onClick={toggleHandler}>
           <div>{!toggleTheme?<Sun/>:<Moon/>}</div>
       </div>
     </div>
+     
   )
 }
 
